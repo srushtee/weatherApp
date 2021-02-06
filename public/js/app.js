@@ -22,7 +22,7 @@ const messageTwo = document.getElementById('messageTwo')
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
 
-    const url = `/weather?address=${search.value}`
+    const url = `git push heroku master/weather?address=${search.value}`
 
     messageOne.textContent = 'Loading...'
     messageTwo.textContent = ''
