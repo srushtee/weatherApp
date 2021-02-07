@@ -17,14 +17,18 @@ const forecast = (lat, long, callback) => {
                     callback('Unable to find a location', undefined);
                 }
                 else {
-                    
+                    console.log(body);
                     const weatherDesc = body.current.weather_descriptions[0]
                     const temp = body.current.temperature
                     const precip = body.current.precip
+                    const windSpeed = body.current.wind_speed
+                    const feelsLike = body.current.feelslike
                     callback(undefined, {
                         temp: temp,
                         precip: precip,
-                        weatherDesc: weatherDesc 
+                        weatherDesc: weatherDesc,
+                        windSpeed: windSpeed,
+                        feelsLike: feelsLike
                     })
                 }
     })

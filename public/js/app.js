@@ -37,9 +37,10 @@ weatherForm.addEventListener('submit', (e) => {
           
         }
         else{
+           
             console.log(data.forecast);
             messageOne.textContent = `Forecase for the location ${search.value}`
-            messageTwo.textContent = `Temperature is ${data.forecast.temp}. Precipitation is ${data.forecast.precip}. Weather is ${data.forecast.weatherDesc}`
+            messageTwo.textContent = `Temperature is ${data.forecast.temp}, feels like ${data.forecast.feelsLike}. Precipitation is ${data.forecast.precip}. Weather is ${data.forecast.weatherDesc}. Windspeed is ${data.forecast.windSpeed}`
         }
         
         

@@ -41,7 +41,7 @@ app.get('', (req, resp) => {
 })
 
 app.get('/weather', (req, resp) => {
-    
+
     const address = req.query.address
     console.log(address);
     if(!req.query.address){
@@ -56,7 +56,7 @@ app.get('/weather', (req, resp) => {
             return resp.send({error: 'There is an error in loading the address'})
         }
        
-
+        console.log('inside for forecast');
         forecast.forecast(latitude,longitude, (error, forecastData) => {
             if(error){
                return resp.send({error})
