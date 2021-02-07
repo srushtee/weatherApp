@@ -1,13 +1,3 @@
-console.log('connecting to file');
-
-
-// fetch('http://puzzle.mead.io/puzzle').then((resp) => {
-//     resp.json().then((data) => {
-//         console.log(data);
-//     })
-// })
-
-
 
 const weatherForm = document.querySelector('form')
 
@@ -24,7 +14,7 @@ weatherForm.addEventListener('submit', (e) => {
 
     const url = `/weather?address=${search.value}`
 
-    console.log(url);
+   
 
     messageOne.textContent = 'Loading...'
     messageTwo.textContent = ''
@@ -32,13 +22,13 @@ weatherForm.addEventListener('submit', (e) => {
     fetch(url).then((resp) => {
     resp.json().then((data) => {
         if(data.error){
-            console.log(data.error);
+          
             messageOne.textContent = data.error
           
         }
         else{
            
-            console.log(data.forecast);
+           
             messageOne.textContent = `Forecase for the location ${search.value}`
             messageTwo.textContent = `Temperature is ${data.forecast.temp}, feels like ${data.forecast.feelsLike}. Precipitation is ${data.forecast.precip}. Weather is ${data.forecast.weatherDesc}. Windspeed is ${data.forecast.windSpeed}`
         }
