@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/app.js"
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js -e js, hbs"
   },
   "author": "",
   "license": "ISC",
@@ -13,7 +14,9 @@
     "express-hbs": "^2.3.4",
     "hbs": "^4.1.1",
     "heroku": "^7.47.11",
-    "nodemon": "^2.0.7",
     "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }

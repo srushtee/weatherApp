@@ -15,7 +15,7 @@ const forecast = (lat, long, callback) => {
                 }
                 else if(body.err){
                     callback('Unable to find a location', undefined);
-                }
+                } 
                 else {
                     console.log(body);
                     const weatherDesc = body.current.weather_descriptions[0]
