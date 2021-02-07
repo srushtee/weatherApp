@@ -1,4 +1,4 @@
-console.log('Connecting to the file');
+console.log('connecting to file');
 
 
 // fetch('http://puzzle.mead.io/puzzle').then((resp) => {
@@ -22,7 +22,9 @@ const messageTwo = document.getElementById('messageTwo')
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
 
-    const url = `git push heroku master/weather?address=${search.value}`
+    const url = `/weather?address=${search.value}`
+
+    console.log(url);
 
     messageOne.textContent = 'Loading...'
     messageTwo.textContent = ''

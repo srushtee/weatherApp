@@ -12,7 +12,7 @@ const port = process.env.PORT || 3000
 //define paths for express config
 const publicDirectory = path.join(__dirname, '../public')
 
-console.log(publicDirectory);
+//console.log(publicDirectory);
 
 const viewsPath = path.join(__dirname, '../templates/views')
 
@@ -41,11 +41,9 @@ app.get('', (req, resp) => {
 })
 
 app.get('/weather', (req, resp) => {
-
-   
-
+    
     const address = req.query.address
-
+    console.log(address);
     if(!req.query.address){
         return resp.send({
             error: 'Need to give an address'
